@@ -58,6 +58,7 @@ Appendix
 Contributing
 
 Contributions are welcome! Please fork the repository, make your improvements, and submit a pull request.
+
 License
 
 MorseID is open-source and distributed under the MIT License.
