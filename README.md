@@ -1,67 +1,77 @@
-MorseID
+Project Overview
 
-About
-
-MorseID is an innovative Arduino project designed to teach and demonstrate the application of Morse code through interactive hardware components. Utilizing an Arduino UNO R3, a 3-color RGB LED, a push button, and a reed switch, this project allows users to visually represent their student ID in Morse code, enhancing their understanding of both Morse code and Arduino programming.
-
-Introduction
-
-The purpose of MorseID is to provide a hands-on experience with embedded systems by implementing a system that flashes a student ID number in Morse Code. A unique color represents each Morse code symbol with a red light for dots and a green light for dashes. The project uses a push button to navigate through the digits of the ID and a reed switch to reset to the beginning of the sequence.
-
+MorseSignal is an innovative Arduino-based project that translates a student ID number into Morse code using a multi-color LED system. This educational toolkit not only demonstrates basic principles of electronics and programming but also integrates Morse code communication methods with modern technology. Designed primarily for learning environments, MorseSignal offers hands-on experience in hardware manipulation and software logic.
 Features
 
-    Interactive Morse Code Display: Utilizes RGB LEDs to display Morse code.
+    Morse Code Translation: Convert any numeric student ID into Morse code signals.
 
-    User Input Control: Uses a push button to step through Morse code representations of a student ID.
+    Color-Coded Output: Utilize a 3-color RGB LED to represent Morse code symbols ('dots' and 'dashes') in different colors.
 
-    Reset Functionality: Includes a reed switch that resets the display sequence.
+    Interactive Control: Change the Morse code representation using a simple push button and reset the sequence with a reed switch.
 
-    Expandable: Code and hardware setup allow for future enhancements and additional functionality.
+    User Customization: Modify Morse code settings such as color and blinking speed via UART serial communication.
 
-Usage
-
-    Setup: Assemble the Arduino UNO R3, RGB LED, push button, and reed switch according to the provided wiring diagram.
-
-    Programming: Upload the provided code to the Arduino.
-
-    Operation:
-
-        Start: Press the push button to begin displaying the Morse code for the first digit of your student ID.
-
-        Continue: Press the button again to proceed to the next digit.
-
-        Reset: Activate the reed switch by bringing a magnet close to it to reset to the first digit.
+    Persistent Settings: Save customized settings (dot/dash color, blinking speed, student ID) using EEPROM to retain modifications even after power is disconnected.
 
 Hardware Components
 
     Arduino UNO R3
 
-    3-color RGB LED
+    RGB LED (Red, Green, Blue)
 
     Push button
 
     Reed switch
 
-    Wires and breadboard
+    Connecting wires
 
-Software
+    USB power cable
 
-    Arduino IDE for programming
+Software and Libraries
 
-Installation
+    Arduino IDE
 
-Compile and upload the following Arduino sketch in the repository to your Arduino UNO R3.
+    EEPROM.h library for saving settings
 
-Appendix
+Setup and Installation
 
-    Source Code: Complete Arduino sketch for MorseID.
+    Hardware Setup: Connect the RGB LED, push button, and reed switch to the Arduino according to the provided circuit diagram.
 
-    Morse Code Reference: https://en.wikipedia.org/wiki/Morse_code
+    Software Configuration: Load the provided Arduino script into the Arduino IDE and upload it to the Arduino UNO R3.
 
-Contributing
+    EEPROM Initialization: On the first run, ensure that the EEPROM is correctly initialized to store and retrieve settings.
 
-Contributions are welcome! Please fork the repository, make your improvements, and submit a pull request.
+Usage
 
+    Starting the Device: Power the Arduino using a USB cable or an external power supply.
+
+    Operating the Device: Press the push button to display the next digit of the student ID in Morse code. Each press advances to the next digit.
+
+    Resetting the Sequence: Bring a magnet close to the reed switch to reset the Morse code sequence to the beginning of the student ID.
+
+    Modifying Settings: Send commands through the serial monitor of the Arduino IDE to change the Morse code colors and speed.
+
+Commands Format
+
+    Change Dot Color: dr (red), db (blue), dg (green)
+
+    Change Dash Color: Dr (red), Db (blue), Dg (green)
+
+    Change Flashing Speed: s1 (slow), s2 (medium), s3 (fast)
+
+    Change Student ID: i######## (replace ######## with new ID)
+
+Future Enhancements
+
+    Network Capabilities: Implement wireless control options such as Bluetooth or Wi-Fi to adjust settings remotely.
+
+    User Interface: Develop a simple mobile app or web interface for easier configuration and visualization.
+
+    Advanced User Input: Integrate a keypad or voice recognition for entering and modifying the student ID directly on the device.
+
+Contributions
+
+Contributions to CodeFlash are welcome. Please fork the repository, make your changes, and submit a pull request for review.
 License
 
-MorseID is open-source and distributed under the MIT License.
+CodeFlash is released under the MIT License. See the LICENSE file for more details.
