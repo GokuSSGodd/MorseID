@@ -1,10 +1,13 @@
 MorseID
+
 About
 
 MorseID is an innovative Arduino project designed to teach and demonstrate the application of Morse code through interactive hardware components. Utilizing an Arduino UNO R3, a 3-color RGB LED, a push button, and a reed switch, this project allows users to visually represent their student ID in Morse code, enhancing their understanding of both Morse code and Arduino programming.
+
 Introduction
 
 The purpose of MorseID is to provide a hands-on experience with embedded systems by implementing a system that flashes a student ID number in Morse Code. A unique color represents each Morse code symbol with a red light for dots and a green light for dashes. The project uses a push button to navigate through the digits of the ID and a reed switch to reset to the beginning of the sequence.
+
 Features
 
     Interactive Morse Code Display: Utilizes RGB LEDs to display Morse code.
